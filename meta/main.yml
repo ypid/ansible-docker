@@ -1,0 +1,43 @@
+---
+
+galaxy_info:
+  author: Robin Schneider
+  description: Install and configure Docker.
+  license: AGPLv3
+  platforms:
+  - name: Debian
+    versions:
+      - jessie
+  - name: Ubuntu
+    versions:
+      - trusty
+      - utopic
+      - vivid
+      - wily
+  categories:
+    - system
+  min_ansible_version: 1.8.4
+dependencies: []
+ansigenome_info:
+  github_url: "https://github.com/ypid/ansible-docker"
+  git_branch: "master"
+  galaxy_id: ""
+
+  ## Travis currently uses Ubuntu 12.04: http://docs.travis-ci.com/user/ci-environment/#Virtualization-environments
+  travis: False
+
+  synopsis: |
+    This role installs Docker via the means of your distribution and configures it. Simple as that.
+
+    There are many Ansible roles for Docker available but most of them do some crazy stuff to get Docker up and running.
+    This is not necessary on up-to-date distributions anymore.
+
+    If you use [mlocate], have a look at the role [tersmitten.updatedb].
+
+    ### Credits
+
+    This role reuses some templates files and variables names from [tersmitten.docker].
+
+    [mlocate]: https://packages.debian.org/search?keywords=mlocate
+    [tersmitten.updatedb]: https://galaxy.ansible.com/list#/roles/2463
+    [tersmitten.docker]: https://galaxy.ansible.com/list#/roles/2309

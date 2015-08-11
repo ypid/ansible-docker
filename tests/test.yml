@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  remote_user: root
+  vars:
+    ## Probably pointless, as there is no dns resolver installed on the test box.
+    docker_opts: '--dns {{ ansible_default_ipv4.address }}'
+
+  roles:
+    - ansible-docker

@@ -1,0 +1,25 @@
+---
+
+## Customize location of Docker binary (especially for development testing).
+docker_binary: ''
+
+## Can be used to modify the daemon startup options.
+docker_opts: ''
+# docker_opts: '--dns {{ ansible_default_ipv4.address }}'
+
+## If you need Docker to use an HTTP proxy, it can also be specified here.
+docker_http_proxy: ''
+
+## This is also a handy place to tweak where Docker's temporary files go.
+docker_tmpdir: ''
+
+
+## "Global" packages to install
+docker_package_list:
+  - 'docker.io'
+
+## "Host group" packages to install
+docker_package_group_list: []
+
+## "Host" packages to install
+docker_package_host_list: []

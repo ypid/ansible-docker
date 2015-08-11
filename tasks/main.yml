@@ -1,0 +1,20 @@
+---
+
+- name: Ensure required packages are installed
+  apt:
+    name: '{{ item }}'
+    state: 'latest'
+    install_recommends: no
+  with_flattened:
+    - docker_package_list
+    - docker_package_group_list
+    - docker_package_host_list
+
+- name: Write configuration file - /etc/default/docker
+  template:
+    src: 'etc/default/docker.j2'
+    dest: '/etc/default/docker'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify: [ 'Reload docker' ]
