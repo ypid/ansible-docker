@@ -1,5 +1,7 @@
 ## docker
 
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-ypid.docker-660198.svg?style=flat)](https://galaxy.ansible.com/list#/roles/4752)
+[![Platforms](http://img.shields.io/badge/platforms-debian%20/%20ubuntu-lightgrey.svg?style=flat)](https://galaxy.ansible.com/list#/roles/4752)
 [![GitHub Tags](https://img.shields.io/github/tag/ypid/ansible-docker.svg)](https://github.com/ypid/ansible-docker)
 [![GitHub Stars](https://img.shields.io/github/stars/ypid/ansible-docker.svg)](https://github.com/ypid/ansible-docker)
 
@@ -20,6 +22,21 @@ This role reuses some templates files and variables names from [tersmitten.docke
 [mlocate]: https://packages.debian.org/search?keywords=mlocate
 [tersmitten.updatedb]: https://galaxy.ansible.com/list#/roles/2463
 [tersmitten.docker]: https://galaxy.ansible.com/list#/roles/2309
+
+### Installation
+
+This role requires at least Ansible `v1.8.4`. To install it, run:
+
+```Shell
+ansible-galaxy install ypid.docker
+```
+
+To install via git, run either:
+
+```Shell
+git clone https://github.com/ypid/ansible-docker.git ypid.docker
+git submodule add https://github.com/ypid/ansible-docker.git ypid.docker
+```
 
 
 

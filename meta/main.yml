@@ -21,7 +21,7 @@ dependencies: []
 ansigenome_info:
   github_url: "https://github.com/ypid/ansible-docker"
   git_branch: "master"
-  galaxy_id: ""
+  galaxy_id: "4752"
 
   ## Travis currently uses Ubuntu 12.04: http://docs.travis-ci.com/user/ci-environment/#Virtualization-environments
   travis: False
