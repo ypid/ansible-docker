@@ -1,5 +1,17 @@
 ---
 
+dependencies:
+
+  - role: debops.apt_preferences
+    tags: apt_preferences
+    tags: [ 'depend::apt_preferences', 'depend::apt_preferences:docker', 'depend-of::docker', 'type::dependency' ]
+    apt_preferences_dependent_list:
+
+      - package: 'docker.io'
+        backports: [ 'jessie' ]
+        reason:  'Docker is available for Jessie via backports - https://lists.debian.org/debian-release/2015/03/msg00685.html'
+        by_role: 'ypid.docker'
+
 galaxy_info:
   author: Robin Schneider
   description: Install and configure Docker.
@@ -17,7 +29,7 @@ galaxy_info:
   categories:
     - system
   min_ansible_version: 1.8.4
-dependencies: []
+
 ansigenome_info:
   github_url: "https://github.com/ypid/ansible-docker"
   git_branch: "master"

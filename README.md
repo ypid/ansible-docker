@@ -39,7 +39,9 @@ git submodule add https://github.com/ypid/ansible-docker.git ypid.docker
 ```
 
 
+### Role dependencies
 
+- `debops.apt_preferences`
 
 ### Role variables
 
