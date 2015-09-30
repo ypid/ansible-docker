@@ -8,6 +8,8 @@
 
 Install and configure Docker.
 
+Deprecated! Use [debops.docker](https://galaxy.ansible.com/list#/roles/5015) instead.
+
 This role installs Docker via the means of your distribution and configures it. Simple as that.
 
 There are many Ansible roles for Docker available but most of them do some crazy stuff to get Docker up and running.
